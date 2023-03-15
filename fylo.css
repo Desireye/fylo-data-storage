@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    background: url(./images/bg-desktop.png), hsl(229, 57%, 11%);
+    background-repeat: no-repeat;
+    background-position-y: 120%;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main{
+    display: flex;
+    gap: 2rem;
+}
+.fylo{
+    height: 12rem;
+    width: 20rem;
+    padding: 4%;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 0.5rem 7rem 0.5rem 0.5rem;
+}
+.icons{
+    display: flex;
+    margin-top: 10%;
+}
+.document, .folder, .upload{
+    border: 1px solid none;
+    background-color: hsl(229, 57%, 11%);
+    width: 3rem;
+    height: 3rem;
+    margin-right: 7%;
+    border-radius: 0.5rem;
+    padding: 5%;
+    display: grid;
+    place-items: center;
+}
+.document img{
+    width: 1.7rem;
+    height: 1.5rem;
+}
+.folder img{
+    height: 1.8rem;
+    width: 1.7rem;
+    padding-right: 9%;
+}
+.upload img{
+    width: 2.1rem;
+    height: 2rem;
+    padding-top: 7%;
+    padding-right: 23%;
+}
+.storage{
+    background-color: hsl(228, 56%, 26%);
+    width: 32rem;
+    height: 8.3rem;
+    border-radius: 0.5rem;
+    padding: 5%;
+    color: hsl(243, 100%, 93%);
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+}
+.storage h2{
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.storage span{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.storage .bar{
+    margin-top: 4%;
+    width: 28.7rem;
+    height: 1rem;
+    border-radius: 3rem;
+    background-color: hsl(229, 57%, 11%);
+}
+.storage .inner-bar{
+    width: 23rem;
+    height: 1rem;
+    border-radius: 3rem;
+    border: 3px solid hsl(229, 57%, 11%);
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+.storage .dot{
+    height: 0.65rem;
+    width: 0.65rem;
+    background: white;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: 0.4%;
+}
+.storage .parameters{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    margin-top: 2%;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.8%;
+}
+.gb-left{
+    background: white;
+    border-radius: 0.5rem;
+    height: 3.5rem;
+    width: 9rem;
+    padding: 1.5% 3%;
+    margin-left: 65%;
+    margin-bottom: -4%;
+    color: black;
+    display: flex;
+    z-index: 9;
+}
+.gb-left h1{
+    font-size: 2rem;
+}
+.gb-left span{
+    font-size: 0.7rem;
+    color: hsl(229, 7%, 55%);
+    margin-top: 12%;
+    margin-left: 7%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+footer{
+    bottom: 1%;
+    position: absolute;
+    font-size: 0.9rem;
+    color: hsl(335, 100%, 65%);
+}
+a{
+    color: hsl(6, 100%, 80%);
+    text-decoration: overline;
+}
+a:hover{
+    color: white;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 50rem) {
+    body{
+        background: url(./images/bg-mobile.png), hsl(228, 56%, 26%);
+        background-repeat: no-repeat;
+    }
+    main{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .fylo{
+        padding: 11%;
+    }
+    .storage{
+        text-align: center;
+        width: 20rem;
+        padding: 8%;
+        flex-direction: column;
+    }
+    .storage .bar{
+        width: 17rem;
+        height: 1.1rem;
+    }
+    .storage .inner-bar{
+        width: 10rem;
+        height: 1.1rem;
+    }
+    section{
+        flex-direction: column-reverse;
+    }
+    .gb-left{
+       margin-left: 25%;
+       margin-top: -9%;
+       padding: 2% 4%;
+    }
+    .storage .dot{
+        margin-top: 0.05rem;
+    }
+}
